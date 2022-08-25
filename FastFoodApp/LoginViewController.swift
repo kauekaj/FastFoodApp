@@ -9,12 +9,17 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    private var customView: LoginView? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        buildView()
         
-        view.backgroundColor = .red
     }
 
-
+    private func buildView() {
+        view = LoginView()
+        customView = view as? LoginView
+    }
 }
 

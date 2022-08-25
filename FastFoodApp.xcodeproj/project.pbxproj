@@ -12,6 +12,7 @@
 		96831D0C28B8247000AEE682 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96831D0B28B8247000AEE682 /* LoginViewController.swift */; };
 		96831D1128B8247200AEE682 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96831D1028B8247200AEE682 /* Assets.xcassets */; };
 		96831D1428B8247200AEE682 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96831D1228B8247200AEE682 /* LaunchScreen.storyboard */; };
+		96831D1C28B8296E00AEE682 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96831D1B28B8296E00AEE682 /* LoginView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		96831D1028B8247200AEE682 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		96831D1328B8247200AEE682 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		96831D1528B8247200AEE682 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96831D1B28B8296E00AEE682 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				96831D0728B8247000AEE682 /* AppDelegate.swift */,
 				96831D0928B8247000AEE682 /* SceneDelegate.swift */,
 				96831D0B28B8247000AEE682 /* LoginViewController.swift */,
+				96831D1B28B8296E00AEE682 /* LoginView.swift */,
 				96831D1028B8247200AEE682 /* Assets.xcassets */,
 				96831D1228B8247200AEE682 /* LaunchScreen.storyboard */,
 				96831D1528B8247200AEE682 /* Info.plist */,
@@ -136,6 +139,7 @@
 			files = (
 				96831D0C28B8247000AEE682 /* LoginViewController.swift in Sources */,
 				96831D0828B8247000AEE682 /* AppDelegate.swift in Sources */,
+				96831D1C28B8296E00AEE682 /* LoginView.swift in Sources */,
 				96831D0A28B8247000AEE682 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

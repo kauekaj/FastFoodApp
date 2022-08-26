@@ -18,6 +18,14 @@ class LoginView: UIView {
     weak var delegate: LoginViewDelegate?
 
     // MARK: - Private Properties
+    
+    lazy var fastFoodLogo: UIImageView = {
+        let element = UIImageView()
+        element.translatesAutoresizingMaskIntoConstraints = false
+        element.image = UIImage(named: "fastFoodLogo")
+        return element
+    }()
+    
     lazy var fastFoodApp: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -50,11 +58,18 @@ extension LoginView: ViewCodable {
     }
     
     func buildViewHierarchy() {
+        addSubview(fastFoodLogo)
         addSubview(fastFoodApp)
     }
     
     func setupConstraints() {
         NSLayoutConstraint.activate([
+            
+            fastFoodLogo.topAnchor.constraint(equalTo: topAnchor, constant: 70),
+            fastFoodLogo.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor),
+            fastFoodLogo.widthAnchor.constraint(equalToConstant: 135),
+            fastFoodLogo.heightAnchor.constraint(equalToConstant: 155),
+            
             fastFoodApp.centerXAnchor.constraint(equalTo: centerXAnchor),
             fastFoodApp.centerYAnchor.constraint(equalTo: centerYAnchor)
         ])

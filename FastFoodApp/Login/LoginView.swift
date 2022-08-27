@@ -26,6 +26,56 @@ class LoginView: UIView {
         return element
     }()
     
+    lazy var emailImage: UIImageView = {
+        let element = UIImageView()
+        element.translatesAutoresizingMaskIntoConstraints = false
+        element.image = UIImage(named: "email")
+        return element
+    }()
+    
+    lazy var emailStackView: UIStackView = {
+        let element = UIStackView(arrangedSubviews: [emailLabel, emailTextField])
+        element.translatesAutoresizingMaskIntoConstraints = false
+        element.spacing = 5
+        element.axis = .vertical
+        element.isLayoutMarginsRelativeArrangement = true
+        element.layoutMargins = UIEdgeInsets(top: 6, left: 0, bottom: 6, right: 0)
+        return element
+    }()
+    
+    
+    lazy var emailLabel: UILabel = {
+        let element = UILabel()
+        element.translatesAutoresizingMaskIntoConstraints = false
+        element.text = "E-mail"
+        element.font = UIFont.systemFont(ofSize: 14)
+        element.textColor = UIColor(red: 0.012, green: 0.02, blue: 0.016, alpha: 1)
+        return element
+    }()
+    
+    lazy var emailTextField: UITextField = {
+        let element = UITextField()
+        element.translatesAutoresizingMaskIntoConstraints = false
+        element.backgroundColor = .red
+        element.isHidden = true
+        element.keyboardType = .emailAddress
+        element.autocapitalizationType = .none
+        element.autocorrectionType = .no
+        return element
+    }()
+    
+    @objc
+    func emailTapped() {
+        emailLabel.font = UIFont.systemFont(ofSize: 11)
+        emailTextField.isHidden = false
+        emailStackView.layoutMargins = UIEdgeInsets(top: 6, left: 0, bottom: 6, right: 0)
+    }
+    
+    
+    
+    
+    
+    
     lazy var fastFoodApp: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -55,11 +105,17 @@ extension LoginView: ViewCodable {
         backgroundColor = .white
         buildViewHierarchy()
         setupConstraints()
+        
+        let emailStackTapped = UITapGestureRecognizer(target: self,
+                                                      action: #selector(emailTapped))
+        emailStackView.addGestureRecognizer(emailStackTapped)
     }
     
     func buildViewHierarchy() {
         addSubview(fastFoodLogo)
         addSubview(fastFoodApp)
+        addSubview(emailImage)
+        addSubview(emailStackView)
     }
     
     func setupConstraints() {
@@ -69,6 +125,16 @@ extension LoginView: ViewCodable {
             fastFoodLogo.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor),
             fastFoodLogo.widthAnchor.constraint(equalToConstant: 135),
             fastFoodLogo.heightAnchor.constraint(equalToConstant: 155),
+            
+            emailImage.topAnchor.constraint(equalTo: fastFoodLogo.bottomAnchor, constant: 119),
+            emailImage.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 40),
+            emailImage.widthAnchor.constraint(equalToConstant: 38),
+            emailImage.heightAnchor.constraint(equalToConstant: 27),
+            
+            emailStackView.bottomAnchor.constraint(equalTo: emailImage.bottomAnchor),
+            emailStackView.leadingAnchor.constraint(equalTo: emailImage.trailingAnchor, constant: 14.4),
+            emailStackView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: 38.2),
+            emailStackView.heightAnchor.constraint(equalToConstant: 45),
             
             fastFoodApp.centerXAnchor.constraint(equalTo: centerXAnchor),
             fastFoodApp.centerYAnchor.constraint(equalTo: centerYAnchor)

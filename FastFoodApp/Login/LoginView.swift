@@ -16,7 +16,7 @@ class LoginView: UIView {
     
     // MARK: - Public Properties
     weak var delegate: LoginViewDelegate?
-
+    
     // MARK: - Private Properties
     
     lazy var fastFoodLogo: UIImageView = {
@@ -69,9 +69,6 @@ class LoginView: UIView {
         return element
     }()
     
-    
-    
-    
     lazy var passwordImage: UIImageView = {
         let element = UIImageView()
         element.translatesAutoresizingMaskIntoConstraints = false
@@ -116,17 +113,6 @@ class LoginView: UIView {
     }()
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
 //    lazy var passwordreminderLAbel: UILabel = {
 //        let label = UILabel()
 //        label.translatesAutoresizingMaskIntoConstraints = false
@@ -156,6 +142,8 @@ extension LoginView: ViewCodable {
         backgroundColor = .white
         buildViewHierarchy()
         setupConstraints()
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
         
         let emailStackTapped = UITapGestureRecognizer(target: self,
                                                       action: #selector(emailTapped))
@@ -223,6 +211,7 @@ extension LoginView: ViewCodable {
     func emailTapped() {
         emailLabel.font = UIFont.systemFont(ofSize: 11)
         emailTextField.isHidden = false
+        emailTextField.becomeFirstResponder()
         emailStackView.layoutMargins = UIEdgeInsets(top: 6, left: 0, bottom: 6, right: 0)
         emailStackLine.backgroundColor = UIColor(red: 1, green: 0.447, blue: 0.369, alpha: 1)
     }
@@ -231,8 +220,13 @@ extension LoginView: ViewCodable {
     func passwordTapped() {
         passwordLabel.font = UIFont.systemFont(ofSize: 11)
         passwordTextField.isHidden = false
+        passwordTextField.becomeFirstResponder()
         passwordStackView.layoutMargins = UIEdgeInsets(top: 6, left: 0, bottom: 6, right: 0)
         passwordStackLine.backgroundColor = UIColor(red: 1, green: 0.447, blue: 0.369, alpha: 1)
     }
 }
 
+
+extension LoginView: UITextFieldDelegate {
+    
+}

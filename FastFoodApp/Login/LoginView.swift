@@ -112,15 +112,31 @@ class LoginView: UIView {
         return element
     }()
     
+    lazy var checkBoxImage: UIImageView = {
+        let element = UIImageView()
+        element.translatesAutoresizingMaskIntoConstraints = false
+        element.image = UIImage(named: "emptyReminderCheckBox")
+        return element
+    }()
     
-//    lazy var passwordreminderLAbel: UILabel = {
-//        let label = UILabel()
-//        label.translatesAutoresizingMaskIntoConstraints = false
-//        label.text = "Fast Food App"
-//        label.textColor = .red
-//        label.font = UIFont.systemFont(ofSize: 30)
-//        return label
-//    }()
+    lazy var passwordreminderLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "Lembrar minha senha"
+        label.textColor = UIColor(red: 0.012, green: 0.02, blue: 0.016, alpha: 1)
+        label.font = UIFont.systemFont(ofSize: 12)
+        return label
+    }()
+    
+    lazy var forgotPasswordLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "Esqueci minha senha"
+        label.textColor = UIColor(red: 0.012, green: 0.02, blue: 0.016, alpha: 1)
+        label.font = UIFont.systemFont(ofSize: 12)
+        return label
+    }()
+    
     
     
     // MARK: - Inits

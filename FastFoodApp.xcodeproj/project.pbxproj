@@ -73,8 +73,7 @@
 		96831D0628B8247000AEE682 /* FastFoodApp */ = {
 			isa = PBXGroup;
 			children = (
-				96831D0728B8247000AEE682 /* AppDelegate.swift */,
-				96831D0928B8247000AEE682 /* SceneDelegate.swift */,
+				9686998928BD860C0060F512 /* Delegate */,
 				96831D1F28B83ADC00AEE682 /* Login */,
 				96831D1D28B83ACF00AEE682 /* ViewCodable.swift */,
 				96831D2028B846D700AEE682 /* Resources */,
@@ -99,6 +98,15 @@
 				96831D1028B8247200AEE682 /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		9686998928BD860C0060F512 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				96831D0728B8247000AEE682 /* AppDelegate.swift */,
+				96831D0928B8247000AEE682 /* SceneDelegate.swift */,
+			);
+			path = Delegate;
 			sourceTree = "<group>";
 		};
 		DAE80A41FD4BFF071F8FD072 /* Pods */ = {

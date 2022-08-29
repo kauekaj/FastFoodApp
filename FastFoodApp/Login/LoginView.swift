@@ -72,30 +72,69 @@ class LoginView: UIView {
     
     
     
-    
-    
-    
-    @objc
-    func emailTapped() {
-        emailLabel.font = UIFont.systemFont(ofSize: 11)
-        emailTextField.isHidden = false
-        emailStackView.layoutMargins = UIEdgeInsets(top: 6, left: 0, bottom: 6, right: 0)
-        emailStackLine.backgroundColor = UIColor(red: 1, green: 0.447, blue: 0.369, alpha: 1)
-    }
-    
-    
-    
-    
-    
-    
-    lazy var fastFoodApp: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Fast Food App"
-        label.textColor = .red
-        label.font = UIFont.systemFont(ofSize: 30)
-        return label
+    lazy var passwordImage: UIImageView = {
+        let element = UIImageView()
+        element.translatesAutoresizingMaskIntoConstraints = false
+        element.image = UIImage(named: "padlock")
+        return element
     }()
+    
+    lazy var passwordStackView: UIStackView = {
+        let element = UIStackView(arrangedSubviews: [passwordLabel, passwordTextField])
+        element.translatesAutoresizingMaskIntoConstraints = false
+        element.spacing = 5
+        element.axis = .vertical
+        element.isLayoutMarginsRelativeArrangement = true
+        element.layoutMargins = UIEdgeInsets(top:22, left: 0, bottom: 6, right: 0)
+        return element
+    }()
+    
+    lazy var passwordStackLine: UIView = {
+        let element = UIView()
+        element.translatesAutoresizingMaskIntoConstraints = false
+        element.backgroundColor = UIColor(red: 0.012, green: 0.02, blue: 0.016, alpha: 1)
+        return element
+    }()
+    
+    lazy var passwordLabel: UILabel = {
+        let element = UILabel()
+        element.translatesAutoresizingMaskIntoConstraints = false
+        element.text = "Senha"
+        element.font = UIFont.systemFont(ofSize: 14)
+        element.textColor = UIColor(red: 0.012, green: 0.02, blue: 0.016, alpha: 1)
+        return element
+    }()
+    
+    lazy var passwordTextField: UITextField = {
+        let element = UITextField()
+        element.translatesAutoresizingMaskIntoConstraints = false
+        element.isHidden = true
+        element.keyboardType = .emailAddress
+        element.autocapitalizationType = .none
+        element.autocorrectionType = .no
+        return element
+    }()
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+//    lazy var passwordreminderLAbel: UILabel = {
+//        let label = UILabel()
+//        label.translatesAutoresizingMaskIntoConstraints = false
+//        label.text = "Fast Food App"
+//        label.textColor = .red
+//        label.font = UIFont.systemFont(ofSize: 30)
+//        return label
+//    }()
     
     
     // MARK: - Inits
@@ -121,14 +160,20 @@ extension LoginView: ViewCodable {
         let emailStackTapped = UITapGestureRecognizer(target: self,
                                                       action: #selector(emailTapped))
         emailStackView.addGestureRecognizer(emailStackTapped)
+        
+        let passwordStackTapped = UITapGestureRecognizer(target: self,
+                                                      action: #selector(passwordTapped))
+        passwordStackView.addGestureRecognizer(passwordStackTapped)
     }
     
     func buildViewHierarchy() {
         addSubview(fastFoodLogo)
-        addSubview(fastFoodApp)
         addSubview(emailImage)
         addSubview(emailStackView)
         addSubview(emailStackLine)
+        addSubview(passwordImage)
+        addSubview(passwordStackView)
+        addSubview(passwordStackLine)
     }
     
     func setupConstraints() {
@@ -154,10 +199,40 @@ extension LoginView: ViewCodable {
             emailStackLine.heightAnchor.constraint(equalToConstant: 1),
             emailStackLine.bottomAnchor.constraint(equalTo: emailStackView.bottomAnchor),
             
-            fastFoodApp.centerXAnchor.constraint(equalTo: centerXAnchor),
-            fastFoodApp.centerYAnchor.constraint(equalTo: centerYAnchor)
+            passwordImage.topAnchor.constraint(equalTo: emailImage.bottomAnchor, constant: 23.3),
+            passwordImage.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 45),
+            passwordImage.widthAnchor.constraint(equalToConstant: 25.9),
+            passwordImage.heightAnchor.constraint(equalToConstant: 41.2),
+            
+            passwordStackView.bottomAnchor.constraint(equalTo: passwordImage.bottomAnchor),
+            passwordStackView.leadingAnchor.constraint(equalTo: emailStackView.leadingAnchor),
+            passwordStackView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -38.2),
+            passwordStackView.heightAnchor.constraint(equalToConstant: 45),
+            
+            passwordStackLine.leadingAnchor.constraint(equalTo: passwordTextField.leadingAnchor),
+            passwordStackLine.trailingAnchor.constraint(equalTo: passwordTextField.trailingAnchor),
+            passwordStackLine.heightAnchor.constraint(equalToConstant: 1),
+            passwordStackLine.bottomAnchor.constraint(equalTo: passwordStackView.bottomAnchor),
+            
         ])
         
+    }
+    
+    // MARK: - Actions
+    @objc
+    func emailTapped() {
+        emailLabel.font = UIFont.systemFont(ofSize: 11)
+        emailTextField.isHidden = false
+        emailStackView.layoutMargins = UIEdgeInsets(top: 6, left: 0, bottom: 6, right: 0)
+        emailStackLine.backgroundColor = UIColor(red: 1, green: 0.447, blue: 0.369, alpha: 1)
+    }
+    
+    @objc
+    func passwordTapped() {
+        passwordLabel.font = UIFont.systemFont(ofSize: 11)
+        passwordTextField.isHidden = false
+        passwordStackView.layoutMargins = UIEdgeInsets(top: 6, left: 0, bottom: 6, right: 0)
+        passwordStackLine.backgroundColor = UIColor(red: 1, green: 0.447, blue: 0.369, alpha: 1)
     }
 }
 

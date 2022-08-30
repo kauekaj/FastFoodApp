@@ -106,16 +106,18 @@ class LoginView: UIView {
         let element = UITextField()
         element.translatesAutoresizingMaskIntoConstraints = false
         element.isHidden = true
-        element.keyboardType = .emailAddress
+        element.keyboardType = .default
         element.autocapitalizationType = .none
         element.autocorrectionType = .no
+        element.isSecureTextEntry = true
         return element
     }()
     
-    lazy var checkBoxImage: UIImageView = {
-        let element = UIImageView()
+    lazy var checkBoxButton: UIButton = {
+        let element = UIButton()
         element.translatesAutoresizingMaskIntoConstraints = false
-        element.image = UIImage(named: "emptyReminderCheckBox")
+        element.setImage(UIImage(named: "emptyReminderCheckBox"), for: .normal)
+        element.addTarget(self, action: #selector(checkBoxTapped), for: .touchUpInside)
         return element
     }()
     
@@ -178,6 +180,8 @@ extension LoginView: ViewCodable {
         addSubview(passwordImage)
         addSubview(passwordStackView)
         addSubview(passwordStackLine)
+        addSubview(checkBoxButton)
+        addSubview(passwordreminderLabel)
     }
     
     func setupConstraints() {
@@ -218,6 +222,15 @@ extension LoginView: ViewCodable {
             passwordStackLine.heightAnchor.constraint(equalToConstant: 1),
             passwordStackLine.bottomAnchor.constraint(equalTo: passwordStackView.bottomAnchor),
             
+            checkBoxButton.topAnchor.constraint(equalTo: passwordStackView.bottomAnchor, constant: 11.9),
+            checkBoxButton.leadingAnchor.constraint(equalTo: passwordStackView.leadingAnchor),
+            checkBoxButton.widthAnchor.constraint(equalToConstant: 15),
+            checkBoxButton.heightAnchor.constraint(equalToConstant: 15),
+            
+            passwordreminderLabel.centerYAnchor.constraint(equalTo: checkBoxButton.centerYAnchor),
+            passwordreminderLabel.leadingAnchor.constraint(equalTo: checkBoxButton.trailingAnchor,constant: 9.8)
+            
+            
         ])
         
     }
@@ -239,6 +252,17 @@ extension LoginView: ViewCodable {
         passwordTextField.becomeFirstResponder()
         passwordStackView.layoutMargins = UIEdgeInsets(top: 6, left: 0, bottom: 6, right: 0)
         passwordStackLine.backgroundColor = UIColor(red: 1, green: 0.447, blue: 0.369, alpha: 1)
+    }
+    
+    @objc
+    func checkBoxTapped() {
+        checkBoxButton.isSelected.toggle()
+        
+        if checkBoxButton.isSelected {
+            checkBoxButton.setImage(UIImage(named: "reminderCheckBox"), for: .normal)
+        } else {
+            checkBoxButton.setImage(UIImage(named: "emptyReminderCheckBox"), for: .normal)
+        }
     }
 }
 

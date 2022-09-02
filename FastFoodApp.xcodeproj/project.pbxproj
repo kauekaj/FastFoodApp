@@ -15,7 +15,27 @@
 		96831D1428B8247200AEE682 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96831D1228B8247200AEE682 /* LaunchScreen.storyboard */; };
 		96831D1C28B8296E00AEE682 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96831D1B28B8296E00AEE682 /* LoginView.swift */; };
 		96831D1E28B83ACF00AEE682 /* ViewCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96831D1D28B83ACF00AEE682 /* ViewCodable.swift */; };
+		96946C0828C2BFD600860109 /* FastFoodAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96946C0728C2BFD600860109 /* FastFoodAppUITests.swift */; };
+		96946C0A28C2BFD600860109 /* FastFoodAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96946C0928C2BFD600860109 /* FastFoodAppUITestsLaunchTests.swift */; };
+		96946C1728C2BFE300860109 /* FastFoodAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96946C1628C2BFE300860109 /* FastFoodAppTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		96946C0B28C2BFD600860109 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 96831CFC28B8247000AEE682 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 96831D0328B8247000AEE682;
+			remoteInfo = FastFoodApp;
+		};
+		96946C1828C2BFE300860109 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 96831CFC28B8247000AEE682 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 96831D0328B8247000AEE682;
+			remoteInfo = FastFoodApp;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		14CCE8BA42B9A8DC7E3658BE /* Pods_FastFoodApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FastFoodApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -37,6 +57,11 @@
 		96831D1528B8247200AEE682 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96831D1B28B8296E00AEE682 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		96831D1D28B83ACF00AEE682 /* ViewCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCodable.swift; sourceTree = "<group>"; };
+		96946C0528C2BFD600860109 /* FastFoodAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FastFoodAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		96946C0728C2BFD600860109 /* FastFoodAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastFoodAppUITests.swift; sourceTree = "<group>"; };
+		96946C0928C2BFD600860109 /* FastFoodAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastFoodAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		96946C1428C2BFE300860109 /* FastFoodAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FastFoodAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		96946C1628C2BFE300860109 /* FastFoodAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastFoodAppTests.swift; sourceTree = "<group>"; };
 		BFE6E4CA2CA0D117A0E0E898 /* Pods-FastFoodApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FastFoodApp.release.xcconfig"; path = "Target Support Files/Pods-FastFoodApp/Pods-FastFoodApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -46,6 +71,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				23D6FF0483BBF6A00FDD04C6 /* Pods_FastFoodApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96946C0228C2BFD600860109 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96946C1128C2BFE300860109 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +118,8 @@
 			isa = PBXGroup;
 			children = (
 				96831D0628B8247000AEE682 /* FastFoodApp */,
+				96946C0628C2BFD600860109 /* FastFoodAppUITests */,
+				96946C1528C2BFE300860109 /* FastFoodAppTests */,
 				96831D0528B8247000AEE682 /* Products */,
 				DAE80A41FD4BFF071F8FD072 /* Pods */,
 				7111BF3B93EF3862AC07520A /* Frameworks */,
@@ -89,6 +130,8 @@
 			isa = PBXGroup;
 			children = (
 				96831D0428B8247000AEE682 /* FastFoodApp.app */,
+				96946C0528C2BFD600860109 /* FastFoodAppUITests.xctest */,
+				96946C1428C2BFE300860109 /* FastFoodAppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -133,6 +176,23 @@
 			path = Delegate;
 			sourceTree = "<group>";
 		};
+		96946C0628C2BFD600860109 /* FastFoodAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				96946C0728C2BFD600860109 /* FastFoodAppUITests.swift */,
+				96946C0928C2BFD600860109 /* FastFoodAppUITestsLaunchTests.swift */,
+			);
+			path = FastFoodAppUITests;
+			sourceTree = "<group>";
+		};
+		96946C1528C2BFE300860109 /* FastFoodAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				96946C1628C2BFE300860109 /* FastFoodAppTests.swift */,
+			);
+			path = FastFoodAppTests;
+			sourceTree = "<group>";
+		};
 		DAE80A41FD4BFF071F8FD072 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -163,6 +223,42 @@
 			productReference = 96831D0428B8247000AEE682 /* FastFoodApp.app */;
 			productType = "com.apple.product-type.application";
 		};
+		96946C0428C2BFD600860109 /* FastFoodAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 96946C0F28C2BFD600860109 /* Build configuration list for PBXNativeTarget "FastFoodAppUITests" */;
+			buildPhases = (
+				96946C0128C2BFD600860109 /* Sources */,
+				96946C0228C2BFD600860109 /* Frameworks */,
+				96946C0328C2BFD600860109 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				96946C0C28C2BFD600860109 /* PBXTargetDependency */,
+			);
+			name = FastFoodAppUITests;
+			productName = FastFoodAppUITests;
+			productReference = 96946C0528C2BFD600860109 /* FastFoodAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		96946C1328C2BFE300860109 /* FastFoodAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 96946C1A28C2BFE300860109 /* Build configuration list for PBXNativeTarget "FastFoodAppTests" */;
+			buildPhases = (
+				96946C1028C2BFE300860109 /* Sources */,
+				96946C1128C2BFE300860109 /* Frameworks */,
+				96946C1228C2BFE300860109 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				96946C1928C2BFE300860109 /* PBXTargetDependency */,
+			);
+			name = FastFoodAppTests;
+			productName = FastFoodAppTests;
+			productReference = 96946C1428C2BFE300860109 /* FastFoodAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -175,6 +271,14 @@
 				TargetAttributes = {
 					96831D0328B8247000AEE682 = {
 						CreatedOnToolsVersion = 13.4.1;
+					};
+					96946C0428C2BFD600860109 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 96831D0328B8247000AEE682;
+					};
+					96946C1328C2BFE300860109 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 96831D0328B8247000AEE682;
 					};
 				};
 			};
@@ -192,6 +296,8 @@
 			projectRoot = "";
 			targets = (
 				96831D0328B8247000AEE682 /* FastFoodApp */,
+				96946C0428C2BFD600860109 /* FastFoodAppUITests */,
+				96946C1328C2BFE300860109 /* FastFoodAppTests */,
 			);
 		};
 /* End PBXProject section */
@@ -203,6 +309,20 @@
 			files = (
 				96831D1428B8247200AEE682 /* LaunchScreen.storyboard in Resources */,
 				96831D1128B8247200AEE682 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96946C0328C2BFD600860109 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96946C1228C2BFE300860109 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,7 +366,37 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		96946C0128C2BFD600860109 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96946C0A28C2BFD600860109 /* FastFoodAppUITestsLaunchTests.swift in Sources */,
+				96946C0828C2BFD600860109 /* FastFoodAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96946C1028C2BFE300860109 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96946C1728C2BFE300860109 /* FastFoodAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		96946C0C28C2BFD600860109 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 96831D0328B8247000AEE682 /* FastFoodApp */;
+			targetProxy = 96946C0B28C2BFD600860109 /* PBXContainerItemProxy */;
+		};
+		96946C1928C2BFE300860109 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 96831D0328B8247000AEE682 /* FastFoodApp */;
+			targetProxy = 96946C1828C2BFE300860109 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		96831D1228B8247200AEE682 /* LaunchScreen.storyboard */ = {
@@ -430,6 +580,76 @@
 			};
 			name = Release;
 		};
+		96946C0D28C2BFD600860109 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N7W6HJZX49;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kauekaj.FastFoodAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FastFoodApp;
+			};
+			name = Debug;
+		};
+		96946C0E28C2BFD600860109 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N7W6HJZX49;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kauekaj.FastFoodAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FastFoodApp;
+			};
+			name = Release;
+		};
+		96946C1B28C2BFE300860109 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N7W6HJZX49;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kauekaj.FastFoodAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FastFoodApp.app/FastFoodApp";
+			};
+			name = Debug;
+		};
+		96946C1C28C2BFE300860109 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N7W6HJZX49;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kauekaj.FastFoodAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FastFoodApp.app/FastFoodApp";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -447,6 +667,24 @@
 			buildConfigurations = (
 				96831D1928B8247200AEE682 /* Debug */,
 				96831D1A28B8247200AEE682 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		96946C0F28C2BFD600860109 /* Build configuration list for PBXNativeTarget "FastFoodAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96946C0D28C2BFD600860109 /* Debug */,
+				96946C0E28C2BFD600860109 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		96946C1A28C2BFE300860109 /* Build configuration list for PBXNativeTarget "FastFoodAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96946C1B28C2BFE300860109 /* Debug */,
+				96946C1C28C2BFE300860109 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

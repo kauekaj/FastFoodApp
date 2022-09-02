@@ -9,7 +9,7 @@ import UIKit
 
 public protocol LoginViewDelegate: AnyObject {
     func didTapFacebookLogin()
-    func didTapGoogleLogin()
+    func didTapLogin()
 }
 
 class LoginView: UIView {
@@ -152,7 +152,10 @@ class LoginView: UIView {
         button.configuration?.background.backgroundColor = UIColor(red: 0.259, green: 0.404, blue: 0.698, alpha: 1)
         button.configuration?.title = "Facebook"
         button.configuration?.image = UIImage(named: "facebook-logo")
-        //button.addTarget(self, action: #selector(didTapFacebookLogin), for: .touchUpInside)
+        button.configuration?.titlePadding = 10
+        button.configuration?.imagePadding = 30
+        button.configuration?.titleAlignment = .leading
+        button.configuration?.contentInsets = NSDirectionalEdgeInsets(top: 8, leading: 8, bottom: 8, trailing: 8)
         return button
     }()
 
@@ -161,10 +164,10 @@ class LoginView: UIView {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.configuration = UIButton.Configuration.filled()
         button.setTitleColor(.white, for: .normal)
-        button.configuration?.background.cornerRadius = 32
+        button.configuration?.background.cornerRadius = 26
         button.configuration?.background.backgroundColor = UIColor(red: 0.882, green: 0.31, blue: 0.09, alpha: 1)
         button.configuration?.title = "Login"
-        //button.addTarget(self, action: #selector(didTapGoogleLogin), for: .touchUpInside)
+        button.addTarget(self, action: #selector(didTapLoginButton), for: .touchUpInside)
         return button
     }()
 
@@ -309,6 +312,21 @@ extension LoginView: ViewCodable {
             checkBoxButton.setImage(UIImage(named: "emptyReminderCheckBox"), for: .normal)
         }
     }
+    
+    func loginFilled() {
+        if emailTextField.text == "ee" && passwordTextField.text == "ee" {
+            loginButton.addTarget(self, action: #selector(didTapLoginButton), for: .touchUpInside)
+            
+        }
+    }
+    
+    @objc
+    func didTapLoginButton() {
+        if emailTextField.text != "" && passwordTextField.text != "" {
+        delegate?.didTapLogin()
+        }
+    }
+    
 }
 
 

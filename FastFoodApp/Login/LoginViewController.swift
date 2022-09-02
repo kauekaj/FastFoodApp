@@ -43,8 +43,8 @@ extension LoginViewController: LoginViewDelegate {
         print("didTapFacebookLogin")
     }
 
-    func didTapGoogleLogin() {
-        print("didTapGoogleLogin")
+    func didTapLogin() {
+        print("didTapLogin")
     }
 }
 

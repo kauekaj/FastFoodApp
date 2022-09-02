@@ -14,6 +14,10 @@ public protocol LoginViewDelegate: AnyObject {
 
 class LoginView: UIView {
     
+    private func getFontAttributes() -> AttributeContainer {
+        AttributeContainer([NSAttributedString.Key.font : UIFont(name: "Ubuntu-Bold", size: 12) ?? .systemFont(ofSize: 12)])
+    }
+    
     // MARK: - Public Properties
     weak var delegate: LoginViewDelegate?
     
@@ -139,6 +143,33 @@ class LoginView: UIView {
         return label
     }()
     
+    private lazy var facebookLoginButton: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.configuration = UIButton.Configuration.filled()
+        button.setTitleColor(.white, for: .normal)
+        button.layer.cornerRadius = 8
+        button.configuration?.background.backgroundColor = UIColor(red: 0.259, green: 0.404, blue: 0.698, alpha: 1)
+        button.configuration?.title = "Facebook"
+        button.configuration?.image = UIImage(named: "facebook-logo")
+        //button.addTarget(self, action: #selector(didTapFacebookLogin), for: .touchUpInside)
+        return button
+    }()
+
+    private lazy var loginButton: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.configuration = UIButton.Configuration.filled()
+        button.setTitleColor(.white, for: .normal)
+        button.configuration?.background.cornerRadius = 32
+        button.configuration?.background.backgroundColor = UIColor(red: 0.882, green: 0.31, blue: 0.09, alpha: 1)
+        button.configuration?.title = "Login"
+        //button.addTarget(self, action: #selector(didTapGoogleLogin), for: .touchUpInside)
+        return button
+    }()
+
+    // MARK: - Private Methods
+    
     
     
     // MARK: - Inits
@@ -182,6 +213,9 @@ extension LoginView: ViewCodable {
         addSubview(passwordStackLine)
         addSubview(checkBoxButton)
         addSubview(passwordreminderLabel)
+        addSubview(forgotPasswordLabel)
+        addSubview(facebookLoginButton)
+        addSubview(loginButton)
     }
     
     func setupConstraints() {
@@ -228,9 +262,20 @@ extension LoginView: ViewCodable {
             checkBoxButton.heightAnchor.constraint(equalToConstant: 15),
             
             passwordreminderLabel.centerYAnchor.constraint(equalTo: checkBoxButton.centerYAnchor),
-            passwordreminderLabel.leadingAnchor.constraint(equalTo: checkBoxButton.trailingAnchor,constant: 9.8)
+            passwordreminderLabel.leadingAnchor.constraint(equalTo: checkBoxButton.trailingAnchor,constant: 9.8),
             
+            forgotPasswordLabel.topAnchor.constraint(equalTo: passwordreminderLabel.bottomAnchor, constant: 10.36),
+            forgotPasswordLabel.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor),
+           
+            facebookLoginButton.topAnchor.constraint(equalTo: forgotPasswordLabel.bottomAnchor, constant: 85),
+            facebookLoginButton.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 52),
+            facebookLoginButton.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -52),
+            facebookLoginButton.heightAnchor.constraint(equalToConstant: 40),
             
+            loginButton.topAnchor.constraint(equalTo: facebookLoginButton.bottomAnchor, constant: 44.47),
+            loginButton.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 53),
+            loginButton.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -53),
+            loginButton.heightAnchor.constraint(equalToConstant: 39),
         ])
         
     }

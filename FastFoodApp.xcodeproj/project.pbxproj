@@ -20,6 +20,14 @@
 /* Begin PBXFileReference section */
 		14CCE8BA42B9A8DC7E3658BE /* Pods_FastFoodApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FastFoodApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F6601A8A803C5A05BABF837 /* Pods-FastFoodApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FastFoodApp.debug.xcconfig"; path = "Target Support Files/Pods-FastFoodApp/Pods-FastFoodApp.debug.xcconfig"; sourceTree = "<group>"; };
+		961BD04328C1846C005E2C72 /* Ubuntu-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-BoldItalic.ttf"; sourceTree = "<group>"; };
+		961BD04428C1846C005E2C72 /* Ubuntu-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-Medium.ttf"; sourceTree = "<group>"; };
+		961BD04528C1846C005E2C72 /* Ubuntu-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-Italic.ttf"; sourceTree = "<group>"; };
+		961BD04628C1846C005E2C72 /* Ubuntu-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-LightItalic.ttf"; sourceTree = "<group>"; };
+		961BD04728C1846C005E2C72 /* Ubuntu-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-Bold.ttf"; sourceTree = "<group>"; };
+		961BD04828C1846C005E2C72 /* Ubuntu-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-MediumItalic.ttf"; sourceTree = "<group>"; };
+		961BD04928C1846C005E2C72 /* Ubuntu-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-Regular.ttf"; sourceTree = "<group>"; };
+		961BD04A28C1846C005E2C72 /* Ubuntu-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-Light.ttf"; sourceTree = "<group>"; };
 		96831D0428B8247000AEE682 /* FastFoodApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FastFoodApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96831D0728B8247000AEE682 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96831D0928B8247000AEE682 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -50,6 +58,21 @@
 				14CCE8BA42B9A8DC7E3658BE /* Pods_FastFoodApp.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		961BD04228C1836B005E2C72 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				961BD04728C1846C005E2C72 /* Ubuntu-Bold.ttf */,
+				961BD04328C1846C005E2C72 /* Ubuntu-BoldItalic.ttf */,
+				961BD04528C1846C005E2C72 /* Ubuntu-Italic.ttf */,
+				961BD04A28C1846C005E2C72 /* Ubuntu-Light.ttf */,
+				961BD04628C1846C005E2C72 /* Ubuntu-LightItalic.ttf */,
+				961BD04428C1846C005E2C72 /* Ubuntu-Medium.ttf */,
+				961BD04828C1846C005E2C72 /* Ubuntu-MediumItalic.ttf */,
+				961BD04928C1846C005E2C72 /* Ubuntu-Regular.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		96831CFB28B8247000AEE682 = {
@@ -95,6 +118,7 @@
 		96831D2028B846D700AEE682 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				961BD04228C1836B005E2C72 /* Fonts */,
 				96831D1028B8247200AEE682 /* Assets.xcassets */,
 			);
 			path = Resources;

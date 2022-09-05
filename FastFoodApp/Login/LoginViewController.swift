@@ -39,6 +39,10 @@ extension LoginViewController: LoginViewDelegate {
 
     func didTapLogin() {
         print("didTapLogin")
+        
+        let vc = HomeViewController()
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true, completion: nil)
     }
 }
 

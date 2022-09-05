@@ -21,6 +21,7 @@
 		96946C1E28C2C3B000860109 /* LoginViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96946C1D28C2C3B000860109 /* LoginViewControllerTests.swift */; };
 		96B7C9EB28C69D23006B37E0 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B7C9EA28C69D23006B37E0 /* HomeView.swift */; };
 		96B7C9ED28C69D32006B37E0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B7C9EC28C69D32006B37E0 /* HomeViewController.swift */; };
+		96B7C9EF28C6A375006B37E0 /* LoginViewControllerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B7C9EE28C6A375006B37E0 /* LoginViewControllerSpy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		96946C1D28C2C3B000860109 /* LoginViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerTests.swift; sourceTree = "<group>"; };
 		96B7C9EA28C69D23006B37E0 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		96B7C9EC28C69D32006B37E0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		96B7C9EE28C6A375006B37E0 /* LoginViewControllerSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerSpy.swift; sourceTree = "<group>"; };
 		BFE6E4CA2CA0D117A0E0E898 /* Pods-FastFoodApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FastFoodApp.release.xcconfig"; path = "Target Support Files/Pods-FastFoodApp/Pods-FastFoodApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -197,6 +199,7 @@
 			children = (
 				96946C1628C2BFE300860109 /* FastFoodAppTests.swift */,
 				96946C1D28C2C3B000860109 /* LoginViewControllerTests.swift */,
+				96B7C9EE28C6A375006B37E0 /* LoginViewControllerSpy.swift */,
 			);
 			path = FastFoodAppTests;
 			sourceTree = "<group>";
@@ -399,6 +402,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				96946C1E28C2C3B000860109 /* LoginViewControllerTests.swift in Sources */,
+				96B7C9EF28C6A375006B37E0 /* LoginViewControllerSpy.swift in Sources */,
 				96946C1728C2BFE300860109 /* FastFoodAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

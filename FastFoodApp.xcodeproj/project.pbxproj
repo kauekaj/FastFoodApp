@@ -18,6 +18,7 @@
 		96946C0828C2BFD600860109 /* FastFoodAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96946C0728C2BFD600860109 /* FastFoodAppUITests.swift */; };
 		96946C0A28C2BFD600860109 /* FastFoodAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96946C0928C2BFD600860109 /* FastFoodAppUITestsLaunchTests.swift */; };
 		96946C1728C2BFE300860109 /* FastFoodAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96946C1628C2BFE300860109 /* FastFoodAppTests.swift */; };
+		96946C1E28C2C3B000860109 /* LoginViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96946C1D28C2C3B000860109 /* LoginViewControllerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		96946C0928C2BFD600860109 /* FastFoodAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastFoodAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		96946C1428C2BFE300860109 /* FastFoodAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FastFoodAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		96946C1628C2BFE300860109 /* FastFoodAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastFoodAppTests.swift; sourceTree = "<group>"; };
+		96946C1D28C2C3B000860109 /* LoginViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerTests.swift; sourceTree = "<group>"; };
 		BFE6E4CA2CA0D117A0E0E898 /* Pods-FastFoodApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FastFoodApp.release.xcconfig"; path = "Target Support Files/Pods-FastFoodApp/Pods-FastFoodApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -189,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				96946C1628C2BFE300860109 /* FastFoodAppTests.swift */,
+				96946C1D28C2C3B000860109 /* LoginViewControllerTests.swift */,
 			);
 			path = FastFoodAppTests;
 			sourceTree = "<group>";
@@ -379,6 +382,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96946C1E28C2C3B000860109 /* LoginViewControllerTests.swift in Sources */,
 				96946C1728C2BFE300860109 /* FastFoodAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

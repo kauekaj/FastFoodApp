@@ -313,16 +313,10 @@ extension LoginView: ViewCodable {
         }
     }
     
-    func loginFilled() {
-        if emailTextField.text == "ee" && passwordTextField.text == "ee" {
-            loginButton.addTarget(self, action: #selector(didTapLoginButton), for: .touchUpInside)
-            
-        }
-    }
     
     @objc
     func didTapLoginButton() {
-        if emailTextField.text != "" && passwordTextField.text != "" {
+        if emailTextField.text == "kaue" && passwordTextField.text == "123" {
         delegate?.didTapLogin()
         }
     }
